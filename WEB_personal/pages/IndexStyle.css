@@ -5,9 +5,10 @@ body {
 }
 
 header{
-    margin-top: 3em;
+    margin-top: 7em;
     text-align: center;
     color: #4CE6CC;
+    border-bottom: 1px solid #AEB8FE
 }
 
 header h1 {
@@ -22,3 +23,75 @@ header h1 {
     top: 0; 
     left: 0;
 }
+
+article {
+    max-width: 600px;
+    margin-bottom: 0em;
+    overflow: hidden;
+    position: relative;
+    min-height: 4em;
+  }
+  
+  .example-left {
+    white-space: nowrap;
+    position: absolute;
+    text-transform: uppercase;
+  }
+  
+  .example-left {
+    -webkit-animation: mymove 8s linear infinite; /* Safari 4.0 - 8.0 */
+    white-space: nowrap;
+    animation: mymove 8s linear infinite alternate;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes mymove {
+    from {
+      left: 0;
+    }
+    to {
+      left: -140px;
+    }
+  }
+  
+  @keyframes mymove {
+    from {
+      left: 0;
+    }
+    to {
+      left: -140px;
+    }
+  }
+  
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes urmove {
+    from {
+      right: 0;
+    }
+    to {
+      right: -140px;
+    }
+  }
+  
+  @keyframes urmove {
+    from {
+      right: 0;
+    }
+    to {
+      right: -140px;
+    }
+  }
+  
+  
+  @keyframes early 
+  { from { opacity:1; } to { opacity:0; } }
+  
+  .early {
+      animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+  
+      animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  
+      animation-duration:1s;
+      animation-delay: 1.5s
+  }

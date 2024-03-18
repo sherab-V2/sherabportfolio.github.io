@@ -8,13 +8,23 @@ header{
     margin-top: 7em;
     text-align: center;
     color: #4CE6CC;
-    border-bottom: 1px solid #AEB8FE
+    border-bottom: 2px solid #4CE6CC;
 }
 
 header h1 {
     font-size: 2em;
     font-weight: 900;
+    
 }
+
+header article{
+  margin-bottom: -100px;
+  margin-top: -100px;
+ border: 2px solid #4CE6CC;
+ padding-bottom: -200px;
+}
+
+
 
 #container3D canvas{
     width: 100vw !important;
@@ -25,12 +35,13 @@ header h1 {
 }
 
 article {
-    max-width: 600px;
+    max-width: 300px;
     margin-bottom: 0em;
     overflow: hidden;
     position: relative;
     min-height: 4em;
   }
+
   
   .example-left {
     white-space: nowrap;

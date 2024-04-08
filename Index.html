@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+      
+    <div class="circle"></div>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Sherab O'Donovan</title>
@@ -8,6 +10,8 @@
         <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
         <script src="/js/index.js"></script>
         <link rel="stylesheet" href="/styles/IndexStyle.css">
+        <link rel="stylesheet" href="/styles/cursor.css">
+        <script src="/js/cursor.js"></script>
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -26,8 +30,12 @@
 
     </head>
 
-    <body>
-      <header>
+    <body><h1 class="counter" style="font-size: 0;">0</h1><div class="overlay">
+      <div class="bar"></div>
+     </div>
+  <header>
+      
+  
             <marquee behavior="scroll" direction="left">
                  Sherab O'Donovan Sherab O'Donovan Sherab O'Donovan Sherab O'Donovan 
                  Sherab O'Donovan Sherab O'Donovan Sherab O'Donovan Sherab O'Donovan 
@@ -39,8 +47,8 @@
             </marquee>
             <div class="currentlistening">
                 
-                <img src="/resources/images/play.svg" alt="enter image" width="10"  style=" margin-left:120px ;margin-top:18px; position: absolute;">
-                <p>currently listening</p>
+                <img src="/resources/images/play.svg" alt="enter image" width="10"  style=" margin-left:128px ;margin-top:19px; position: absolute;">
+                <p style="margin-left: 10px;">currently listening</p>
                 
                 <img src="/resources/images/enterv2.svg" alt="enter image" width="30"  style="position: absolute; margin-top:-4px;">
                 <a href="https://www.youtube.com/watch?v=zTavGZSFnzs" target="_blank">1. Speechless - Helmet</a>
@@ -56,6 +64,8 @@
 
                 <img src="/resources/images/enterv2.svg" alt="enter image" width="30"  style="position: absolute; margin-top:-4px;">
                 <a href="https://www.youtube.com/watch?v=mUSVav9pKO4" target="_blank">5. Sunny - Yorushika</a>
+
+                <img src="/resources/images/FLCL logo.svg" alt="FLCL logo" width="160"   style="position: absolute; margin-top:-11vh; margin-left: 6vw;" >
             </div>
      </header>   
   
@@ -82,7 +92,7 @@
             </li>
             
             <li class="sub-menu">
-              <a href="/pages/about.html">More about me</a>
+              <a href="/pages/aboutme.html">More about me</a>
            
             </li>
             <li>
@@ -115,27 +125,80 @@
                 </div>
 <div class="carouselcontainer">
 <!-- Flickity HTML init -->
+<div style="position: absolute; color: white; margin-left: 16vw; margin-top: -2vh;"><h1>cool typ shi</h1></div>
 <div class="carousel"
   data-flickity='{ "cellSelector": ".carousel-cell"}'>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"><p>"Canti FLCL" (https://skfb.ly/ovnKZ) by 3y6 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p> <div class="container3d"></div></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-</div>
-
-</div>
-      </main>
-   
-
-</div>
-
-    <footer>
-
-    </footer>
-   
-    </body>
+  <div class="carousel-cell">
     
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OeLQOfb6IBU?si=nDiGjaxBLF7DCKs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="carousel-cell">
+    <img src="/resources/images/post_ironic_skeleton.jpg" alt="a post ironic skeleton" width="100%" height="100%">
+  </div>
+  <div class="carousel-cell">
+   <p style="position: absolute; font-size: 40px; color: white;">graphic design is my passhion</p>
+  <img src="/resources/images/graphicdesign.png" alt="wonderful graphic design" width="100%" height="100%">
+</div>
+  <div class="carousel-cell">
+    <p style="position: absolute; font-size: 30px; color: rgb(255, 0, 0);">
+    I dont think i have enough time to do threejs stuff :..| </p>
+    <img src="/resources/images/a16a1fa2c567cb97b11c74ace70384e1.jpg" alt="miyaoto musashi chillin" width="100%" height="100%">
+    </div>
+   </div> 
+  </div>
+      </main>
+      <footer class="footer">
+        <p style="color: white;">idk what to put in dis mf</p>
+      </footer>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script defer>
+   
+       function startLoader() {
+         let counterElement = document.querySelector(".counter");
+         let currentValue = 0;
+   
+         function updateCounter(){
+           if (currentValue === 100) {
+             return;
+           }
+   
+           currentValue += Math.floor(Math.random()*10) +1;
+   
+           if (currentValue > 100) {
+             currentValue = 100;
+           }
+   
+           counterElement.textContent = currentValue;
+   
+           let delay = Math.floor(Math.random()*100) +1;
+           setTimeout(updateCounter, delay);
+   
+   
+         }
+         updateCounter();
+       }
+   startLoader();
+   
+   gsap.to(".counter", 0.15,{
+         delay:.5, 
+         opacity: 0,
+       });
+   
+       gsap.to(".bar", .55,{
+         delay: .5,
+         height: 0,
+         stagger: {
+           amount: 0.25,
+         },
+         ease: "power4.inout",
+       });
+   
+      </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+   
    
 </html>

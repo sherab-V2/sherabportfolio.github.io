@@ -41,7 +41,7 @@ marquee {
   margin-left: 20px;
   margin-top: 20px;
   padding-top: 20px;
-  padding-bottom: 19px;
+  padding-bottom: 26px;
   
 }
 
@@ -49,6 +49,18 @@ marquee {
   text-decoration: none;
   margin-left: 2vw;
   color: #4CE6CC;
+  
+  font-size: .7vw;
+}
+
+
+.about{
+  margin-top: 10vh;
+ margin-left: 15vw; 
+ margin-right:60vw ;
+ padding-bottom: 10vh;
+ color: white;
+ display: block;
 }
 
 .currentlistening a:hover{
@@ -56,45 +68,6 @@ marquee {
 }
 
 
-
-  /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes mymove {
-    from {
-      left: 0;
-    }
-    to {
-      left: -140px;
-    }
-  }
-  
-  @keyframes mymove {
-    from {
-      left: 0;
-    }
-    to {
-      left: -140px;
-    }
-  }
-  
-  
-  /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes urmove {
-    from {
-      right: 0;
-    }
-    to {
-      right: -140px;
-    }
-  }
-  
-  @keyframes urmove {
-    from {
-      right: 0;
-    }
-    to {
-      right: -140px;
-    }
-  }
   
   
   @keyframes early 
@@ -109,16 +82,10 @@ marquee {
       animation-delay: 1.5s
   }
 
-
-  
-
-  .sidebar-toggle {
-    margin-left: -240px;
-  }
   .sidebar {
-    width: 240px;
+    width: 210px;
     height: 100%;
-    background: #293949;
+    background-color: #5f6cad4e;
     position: absolute;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -126,66 +93,85 @@ marquee {
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     z-index: 100;
-    #leftside-navigation {
-      ul, ul ul {
-        margin: -2px 0 0;
-        padding: 0;
-      }
-      ul {
-        li {
-          list-style-type: none;
-          border-bottom: 1px solid rgba(255,255,255,.05);
-          &.active {
-            & > a {
-              color: #1abc9c;
-            }
-            ul {
-              display: block;
-            }
-          }
-          a {
-            color: #aeb2b7;
-            text-decoration: none;
-            display: block;
-            padding: 18px 0 18px 25px;
-            font-size: 12px;
-            outline: 0;
-            -webkit-transition: all 200ms ease-in;
-            -moz-transition: all 200ms ease-in;
-            -o-transition: all 200ms ease-in;
-            -ms-transition: all 200ms ease-in;
-            transition: all 200ms ease-in;
-            &:hover {
-              color: #1abc9c;
-            }
-            span {
-              display: inline-block;
-            }
-            i {
-              width: 20px;
-              .fa-angle-left, .fa-angle-right {
-                padding-top: 3px;
-              }
-            }
-          }
-        }
-      }
-      ul ul {
-        display: none;
-        li {
-          background: #23313f;
-          margin-bottom: 0;
-          margin-left: 0;
-          margin-right: 0;
-          border-bottom: none;
-          a {
-            font-size: 12px;
-            padding-top: 13px;
-            padding-bottom: 13px;
-            color: #aeb2b7;
-          }
-        }
-      }
-    }
-  }
+ }
+  .sidebar #leftside-navigation ul, .sidebar #leftside-navigation ul ul {
+    margin: -2px 0 0;
+    padding: 0;
+ }
+  .sidebar #leftside-navigation ul li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+ }
+  .sidebar #leftside-navigation ul li.active ul {
+    display: block;
+ }
+  .sidebar #leftside-navigation ul li a {
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 25px;
+    font-size: 16px;
+    outline: 0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+ }
+  .sidebar #leftside-navigation ul li a:hover {
+    color: #1abc9c;
+ }
+  .sidebar #leftside-navigation ul li a span {
+    display: inline-block;
+ }
+  .sidebar #leftside-navigation ul li a i {
+    width: 20px;
+ }
+  .sidebar #leftside-navigation ul li a i .fa-angle-left, .sidebar #leftside-navigation ul li a i .fa-angle-right {
+    padding-top: 3px;
+ }
+  .sidebar #leftside-navigation ul ul {
+    display: none;
+ }
+  .sidebar #leftside-navigation ul ul li {
+    background: #515c928c;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: none;
+ }
+  .sidebar #leftside-navigation ul ul li a {
+    font-size: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: #aeb2b7;
+ }
+  
+ .carouselcontainer{
+  margin-left: 40vw;
+  margin-top: -525px;
+  width: 30vw;
+  
+ }
 
+.carousel {
+  position: relative;
+}
+
+.carousel-cell {
+  width: 60%;
+  height: 400px;
+  background: #8C8;
+  border-radius: 5px;
+  margin: 40px;
+
+}
+
+/* cell number */
+.carousel-header {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}

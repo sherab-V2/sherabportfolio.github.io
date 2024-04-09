@@ -5,38 +5,63 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    scroll-behavior: smooth;
 }
-/*The CSS for the bars and overlay*/
 body a{
 
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-canvas {
-    position:absolute;
-    top:0;
-    left:0
+footer{
+  display: flex;
+  justify-content: center;
+  padding: 10vw;
 }
-
-/*The CSS for the bars and overlay*/
+li{
+  display: block;
+  justify-content: center;width: 100%;
+}
 
 .overlay{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 110%;
     z-index: 2;
     display: flex;
     pointer-events: none;
+    z-index: 100;
   }
   
   .bar{
     width: 105%;
     height: 105%;
     background: #002a32;
-    z-index: 1;
+    z-index: 100;
     pointer-events: none;
   }
 
+
+  header{
+    font-family: 'MedievalSharp';
+    font-size:20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top:2vw ;
+    margin-bottom: 10vw;
+  }
+
+ul{
+  list-style-type: none;
+}
+
+  .doom{
+    font-family: 'Doom 2016 Left', sans-serif; 
+    font-size: 10vw; 
+    letter-spacing: .5rem;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+  }
   #menuToggle
   {
     display: block;
@@ -180,3 +205,125 @@ canvas {
   {
     transform: none;
   }
+
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    font-size: 10vw;
+    line-height: 30px;
+    -webkit-text-stroke: 2px #ffffff;
+    color: rgb(0, 0, 0);
+    -webkit-transition-duration: .5s;
+         -o-transition-duration: .5s;
+            transition-duration: .5s;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 2vw;
+    margin-bottom: 5px;
+  }
+  
+  .logo a {
+    font-family: "roc-grotesk-extrawide", sans-serif;
+    text-decoration: none;
+    font-weight: 900;
+            transition-duration: 0.3s;
+    color: red; /* Start with red text color */
+  }
+  
+
+  
+  
+  .logo a:hover {
+    color: rgba(255, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+  
+  
+/*only fonts (o_<)   */
+Roc Grotesk ExtraWide {
+  font-family: "roc-grotesk-extrawide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+Roc Grotesk ExtraWide ExtraBold {
+  font-family: "roc-grotesk-extrawide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+code {
+  font-family: "roc-grotesk-extrawide", sans-serif;
+}
+
+  
+.medievalsharp-regular {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-shiny {
+  border: none;
+  background: rgb(119, 0, 255);
+    background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(191, 0, 255) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn-shiny:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-shiny:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-shiny:hover{
+  opacity: .7;
+}
+.btn-shiny:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}

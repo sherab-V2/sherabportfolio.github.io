@@ -4,6 +4,11 @@ html, body {
   background-color: #011627;
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 scroll-behavior: smooth;
+overflow-x: hidden;
+}
+
+main{
+  overflow: hidden;
 }
 /*The CSS for the bars and overlay*/
 body a{
@@ -81,10 +86,10 @@ marquee {
 
 
 .about{
-  margin-top: 10vh;
+  margin-top:1vh;
  margin-left: 15vw; 
  margin-right:60vw ;
- padding-bottom: 10vh;
+ padding-bottom: 5vh;
  color: white;
  display: block;
 }
@@ -110,7 +115,7 @@ marquee {
 
   .sidebar {
     width: 210px;
-    height: 100%;
+    height: 100vh;
     background-color: #5f6cad4e;
     position: absolute;
     -webkit-transition: all .3s ease-in-out;
@@ -204,12 +209,11 @@ marquee {
 footer {
   position: absolute;
   text-align: center;      
+  margin-top: 10vh;
   width: 100vw;                                      
   margin-bottom: 0;  
-  margin-top: 28vh;    
   border-top: solid 2px #758BFD; 
   z-index: 2;     
-  padding-bottom: 3vh;
   background-color: #011627 ;
 }
 
@@ -233,6 +237,8 @@ footer a:hover
 button {
   margin: 20px;
 }
+
+/*shinyyyyyyy ogooooohhhh*/
 .custom-btn {
   width: 130px;
   height: 40px;

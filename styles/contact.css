@@ -3,7 +3,15 @@ html, body {
   margin: 0;
   
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-color: #011627;
 }
+main{
+  background-color: #011627;
+  
+  display: flex;
+  justify-content: center;
+}
+
 /*The CSS for the bars and overlay*/
 body a{
 
@@ -172,13 +180,13 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 
 .icons{
+  margin-top: 25vw;
   display: inline-flex;
-  margin-left: 42.5vw;
+  justify-content: center;
 }
 .icons a{
   margin: 20vh 40px ;
   text-decoration: none;
-  color: #fff;
   display: block;
   position: relative;
 }
@@ -234,11 +242,27 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #ff5e00;
   border-color: #ff4d00;
 }
+.icons a:nth-child(3) .layer span,
+.icons a:nth-child(3) .words{
+  color: #ff5e00;
+  border-color: #ff4d00;
+}
+.icons a:nth-child(4) .layer span,
+.icons a:nth-child(4) .words{
+  color: #ff5e00;
+  border-color: #ff4d00;
+}
 
 .icons a:hover:nth-child(1) .layer span{
   box-shadow: -1px 1px 3px #4267B2;
 }
 .icons a:hover:nth-child(2) .layer span{
+  box-shadow: -1px 1px 3px #000000;
+}
+.icons a:hover:nth-child(3) .layer span{
+  box-shadow: -1px 1px 3px #000000;
+}
+.icons a:hover:nth-child(4) .layer span{
   box-shadow: -1px 1px 3px #000000;
 }
 .icons a .words{
@@ -254,3 +278,4 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   bottom: -35px;
   opacity: 1;
 }
+

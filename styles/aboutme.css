@@ -1,7 +1,6 @@
 html, body {
     padding: 0;
     margin: 0;
-    
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /*The CSS for the bars and overlay*/
@@ -9,6 +8,32 @@ body a{
   
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+main{
+  position: absolute;
+  display: block;
+justify-content: center;
+width: 100%;
+}
+
+main h1{
+  text-align: center;
+  position: relative;
+  color: white;
+  margin: 5vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px
+}
+
+main p{
+  text-align: center;
+  position: relative;
+  color: white;
+  margin: 1vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
 
 .overlay{
     position: fixed;
@@ -62,6 +87,8 @@ footer {
     margin-top: 0px;
     padding: 5.4vw;
     background-color: #aeb8fe;
+    display: flex;
+    justify-content: center;
 }
 
  
@@ -209,3 +236,84 @@ text-align: left;
   transform: none;
 }
 
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-shiny {
+  border: none;
+  background: rgb(119, 0, 255);
+    background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(191, 0, 255) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn-shiny:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-shiny:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-shiny:hover{
+  opacity: .7;
+}
+.btn-shiny:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+section {
+  font-size: 10px;
+  width: 60%;
+  max-width: 600px;
+  position: relative;
+  margin: 0px auto;
+  padding: 10px 30px;
+  text-align: center;
+  color: #ffffff;
+  scale: 0.94;
+  opacity: 0;
+  transition: 0.9s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+}
+
+section.active {
+  opacity: 1;
+  top: 0;
+  scale: 1;
+}

@@ -1,6 +1,14 @@
-
+html, body {
+  padding: 0;
+  margin: 0;
+  
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 /*The CSS for the bars and overlay*/
+body a{
 
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .overlay{
     position: fixed;
     width: 100%;
@@ -126,33 +134,33 @@
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
-  position: absolute;
-  width: 105vw;
-  height: 105vh;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #002a32;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-  font-weight: 400;
-font-size: 100px;
-text-align: center;
-}
+ #menu
+ {
+   position: absolute;
+   width: 40vw;
+   height: 105vh;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   background: #002a32;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+   font-weight: 400;
+ font-size: 100px;
+ text-align: left;
+ }
 
 /*
  * And let's slide it in from the left
@@ -160,4 +168,89 @@ text-align: center;
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+
+.icons{
+  display: inline-flex;
+  margin-left: 42.5vw;
+}
+.icons a{
+  margin: 20vh 40px ;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.icons a .layer{
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icons a:hover .layer{
+  transform: rotate(-35deg) skew(20deg);
+}
+.icons a .layer span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.icons a .layer span.fab{
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+}
+.icons a:hover .layer span:nth-child(1){
+  opacity: 0.2;
+}
+.icons a:hover .layer span:nth-child(2){
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icons a:hover .layer span:nth-child(3){
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icons a:hover .layer span:nth-child(4){
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icons a:hover .layer span:nth-child(5){
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+.icons a:nth-child(1) .layer span,
+.icons a:nth-child(1) .words{
+  color: #ff005d;
+  border-color: #ff0062;
+}
+.icons a:nth-child(2) .layer span,
+.icons a:nth-child(2) .words{
+  color: #ff5e00;
+  border-color: #ff4d00;
+}
+
+.icons a:hover:nth-child(1) .layer span{
+  box-shadow: -1px 1px 3px #4267B2;
+}
+.icons a:hover:nth-child(2) .layer span{
+  box-shadow: -1px 1px 3px #000000;
+}
+.icons a .words{
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icons a:hover .words{
+  bottom: -35px;
+  opacity: 1;
 }

@@ -2,9 +2,13 @@ html, body {
     padding: 0;
     margin: 0;
     
-    font-family: "League Spartan", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /*The CSS for the bars and overlay*/
+body a{
+  
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .overlay{
     position: fixed;
@@ -15,6 +19,10 @@ html, body {
     pointer-events: none;
   }
   
+.counter{
+  font-size: 0px;
+}
+
   .bar{
     width: 105%;
     height: 105%;
@@ -25,17 +33,33 @@ html, body {
   
 header{
     width: 100%;
-    padding:4vw 0;
+    padding:2vw 0;
     background-color: #011627;
 }
+
+.one{
+  display: flex;
+  font-size: 50px;
+  color: #4CE6CC;
+  font-weight: 900;
+  justify-content: center;
+}
+p.one:hover img{ 
+  display: block;
+}
+
+.nyan{
+  display: none;
+  position: absolute;
+}
 aside{
- position: sticky;
     top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
+    z-index: 1;
 }
 footer {
-    margin-top: -4px;
+    margin-top: 0px;
     padding: 5.4vw;
     background-color: #aeb8fe;
 }
@@ -152,8 +176,8 @@ footer {
 #menu
 {
   position: absolute;
-  width: 105vw;
-  height: 105vh;
+  width: 40vw;
+  height: 110vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -174,7 +198,7 @@ footer {
   font-size: 22px;
   font-weight: 400;
 font-size: 100px;
-text-align: center;
+text-align: left;
 }
 
 /*
@@ -184,3 +208,4 @@ text-align: center;
 {
   transform: none;
 }
+
